@@ -31,10 +31,12 @@ for l in open('/lfs/madmax/0/czhang/gtgt/data/alldata.tsv'):
 	rs["feature1"] = ss[1]
 	rs["feature2"] = ss[2]
 
-	for r in rels:
-		if r == ss[0]:
-			rs[r] = True
-		else:
-			rs[r] = False
+	if (ss[1].startswith('PERSON') and ss[1].endswith('PERSON')) or (ss[2].startswith('PERSON') and ss[2].endswith('PERSON')):
 
-	print json.dumps(rs)
+		for r in rels:
+			if r == ss[0]:
+				rs[r] = True
+			else:
+				rs[r] = False
+
+		print json.dumps(rs)
