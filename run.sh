@@ -3,5 +3,5 @@
 cd "$(dirname $0)/../paleodeepdive.language";
 ROOT_PATH=`pwd`
 
-$ROOT_PATH/../group_testing/prepare_data.sh
-env JAVA_OPTS="-Xmx4g" sbt "run -c $ROOT_PATH/../group_testing/application.conf"
+$ROOT_PATH/../gtgt/prepare_data.sh
+env JAVA_OPTS="-Xmx4g" sbt "run -c $ROOT_PATH/../gtgt/application.conf"
