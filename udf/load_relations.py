@@ -22,7 +22,7 @@ rels = {
 "_per_title":16,
 "_per_schools_attended":17}
 
-for l in open('/Users/czhang/Desktop/group_testing/data/alldata.tsv'):
+for l in open('/lfs/madmax/0/czhang/gtgt/data/alldata.tsv'):
 	ss = l.rstrip().split('\t')
 	if len(ss) < 3:
 		ss.append("EMPTY")
